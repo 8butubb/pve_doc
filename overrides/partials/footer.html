@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block footer %}
+<footer class="md-footer">
+  <div class="md-footer-custom">
+    <span>&copy; {{ build_year }} butubb</span>
+    <span>构建时间: {{ build_date }}</span>
+  </div>
+</footer>
+{{ super() }}
+{% endblock %}
+
+<style>
+.md-footer-custom {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  color: var(--md-typeset-color-secondary);
+  background: var(--md-footer-bg-color);
+  border-top: 1px solid var(--md-border-color);
+}
+</style>
