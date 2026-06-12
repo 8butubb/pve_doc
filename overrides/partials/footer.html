@@ -1,12 +1,10 @@
 {% extends "base.html" %}
 
 {% block footer %}
-<footer class="md-footer">
-  <div class="md-footer-custom">
-    <span>&copy; {{ build_year }} butubb</span>
-    <span>构建时间: {{ build_date }}</span>
-  </div>
-</footer>
+<div class="md-footer-custom">
+  <span>&copy; {{ config.extra.build_year }} butubb</span>
+  <span>{{ config.extra.build_date }}</span>
+</div>
 {{ super() }}
 {% endblock %}
 
