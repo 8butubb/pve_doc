@@ -1,5 +1,5 @@
-site_name: butubb的pve环境配置文档
-site_description: PVE 文档
+site_name: butubb的pve
+site_description: PVE 配置文档
 site_url: https://pve.doc.butubb.cn
 
 repo_name: 8butubb/pve_doc
