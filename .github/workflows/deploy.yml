@@ -6,7 +6,9 @@ on:
       - main
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 concurrency:
   group: "pages"
@@ -14,6 +16,9 @@ concurrency:
 
 jobs:
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -21,5 +26,10 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install mkdocs-material mkdocs-git-revision-date-localized-plugin
-      - run: git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/8butubb/pve_doc.git
-      - run: mkdocs gh-deploy --force --remote-name origin
+      - run: mkdocs build
+      - id: deployment
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deploy
+        uses: actions/deploy-pages@v4
