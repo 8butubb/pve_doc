@@ -31,5 +31,5 @@ plugins:
   - git-revision-date-localized
 
 extra:
-  build_year: YEAR
-  build_date: BUILD_INFO
+
+copyright: "COPYRIGHT_PLACEHOLDER"
