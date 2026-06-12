@@ -33,6 +33,3 @@ plugins:
 extra:
   build_year: YEAR
   build_date: BUILD_INFO
-  social:
-    - link: https://github.com/8butubb
-      icon: "fontawesome/brands/github"
