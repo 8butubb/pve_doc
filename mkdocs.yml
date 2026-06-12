@@ -23,6 +23,8 @@ theme:
 
 nav:
   - Home: index.md
+  - PVE宿主机:
+    - 铭凡N5 Air: pve-host/index.md
 
 plugins:
   - search
