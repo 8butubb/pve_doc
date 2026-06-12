@@ -28,16 +28,12 @@ jobs:
       - run: pip install mkdocs-material mkdocs-git-revision-date-localized-plugin
       - name: Set build info
         run: |
+          BUILD_YEAR=$(date -u +'%Y')
           BUILD_DATE=$(date -u +'%Y-%m-%d %H:%M:%S')
           BUILD_COMMIT=${GITHUB_SHA::8}
-          python3 -c "
-          with open('mkdocs.yml', 'r') as f:
-              content = f.read()
-          content = content.replace(\"构建时间: N/A | Commit: N/A\", '构建时间: ${BUILD_DATE} | Commit: ${BUILD_COMMIT}')
-          with open('mkdocs.yml', 'w') as f:
-              f.write(content)
-          "
-      - run: mkdocs build -t material
+          sed -i "s/YEAR/${BUILD_YEAR}/" mkdocs.yml
+          sed -i "s/BUILD_INFO/${BUILD_DATE} | Commit: ${BUILD_COMMIT}/" mkdocs.yml
+      - run: mkdocs build
       - id: deployment
         uses: actions/upload-pages-artifact@v3
         with:
