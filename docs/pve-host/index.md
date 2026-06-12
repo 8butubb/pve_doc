@@ -4,7 +4,7 @@
 
 ## 硬件规格
 
-- 处理器：Intel N5系列
+- 处理器：amd Ryzen 7 255H
 - 内存：支持 DDR5
 - 存储：M.2 NVMe SSD
 - 网络：千兆网口

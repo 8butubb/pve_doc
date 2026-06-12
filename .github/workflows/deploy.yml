@@ -33,7 +33,7 @@ jobs:
           python3 -c "
           with open('mkdocs.yml', 'r') as f:
               content = f.read()
-          content = content.replace('build_info: \"构建时间: N/A | Commit: N/A\"', 'build_info: \"构建时间: ${BUILD_DATE} | Commit: ${BUILD_COMMIT}\"')
+          content = content.replace(\"构建时间: N/A | Commit: N/A\", '构建时间: ${BUILD_DATE} | Commit: ${BUILD_COMMIT}')
           with open('mkdocs.yml', 'w') as f:
               f.write(content)
           "

@@ -31,9 +31,7 @@ plugins:
   - git-revision-date-localized
 
 extra:
-  build_info: "构建时间: N/A | Commit: N/A"
-  footer:
-    copyright: "&copy; 2024 butubb"
+  footer: "<span>&copy; 2024 butubb</span><span id='build-info'>构建时间: N/A | Commit: N/A</span>"
   social:
     - link: https://github.com/8butubb
       icon: fontawesome/brands/github
