@@ -30,6 +30,4 @@ plugins:
   - search
   - git-revision-date-localized
 
-extra:
-
 copyright: "COPYRIGHT_PLACEHOLDER"
