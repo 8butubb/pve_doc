@@ -30,8 +30,8 @@ jobs:
       - run: pip install mkdocs-material mkdocs-git-revision-date-localized-plugin
       - name: Set build info
         run: |
-          BUILD_YEAR=$(date -u +'%Y')
-          BUILD_DATE=$(date -u +'%Y-%m-%d %H:%M:%S')
+          BUILD_YEAR=$(TZ='Asia/Shanghai' date +'%Y')
+          BUILD_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')
           BUILD_COMMIT=${GITHUB_SHA::8}
           sed -i "s/COPYRIGHT_PLACEHOLDER/\&copy; ${BUILD_YEAR} butubb \&nbsp;\| \&nbsp; 构建时间: ${BUILD_DATE} \&nbsp;\| \&nbsp; Commit: ${BUILD_COMMIT}/" mkdocs.yml
       - run: mkdocs build
