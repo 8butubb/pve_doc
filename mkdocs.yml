@@ -1,4 +1,4 @@
-site_name: PVE Documentation
+site_name: butubb的pve环境配置文档
 site_description: PVE 文档
 site_url: https://pve.doc.butubb.cn
 
@@ -28,3 +28,12 @@ nav:
 
 plugins:
   - search
+  - git-revision-date-localized
+
+extra:
+  footer:
+    copyright: "&copy; 2024 butubb"
+    show_build_info: true
+  social:
+    - link: https://github.com/8butubb
+      icon: fontawesome/brands/github
