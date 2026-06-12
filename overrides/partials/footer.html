@@ -2,8 +2,8 @@
 
 {% block footer_meta %}
 <div class="md-footer-custom">
-  <span>&copy; {{ config.extra.build_year | default("2026") }} butubb</span>
-  <span>{{ config.extra.build_date | default("构建时间: N/A") }}</span>
+  <span>&copy; {{ build_year }} butubb</span>
+  <span>{{ build_date }}</span>
 </div>
 {{ super() }}
 {% endblock %}
@@ -15,6 +15,5 @@
   padding: 0.3rem 0.5rem;
   font-size: 0.7rem;
   color: var(--md-typeset-color-secondary);
-  background: var(--md-footer-bg-color);
 }
 </style>
