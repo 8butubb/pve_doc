@@ -23,7 +23,8 @@ theme:
 
 nav:
   - Home: index.md
-  - 硬件配置: hardware/
+  - 硬件配置:
+    - hardware/
 
 plugins:
   - search
