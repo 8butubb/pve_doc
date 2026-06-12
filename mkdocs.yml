@@ -1,9 +1,9 @@
 site_name: PVE Documentation
 site_description: PVE 文档
-site_url: https://skn-33.github.io/pve-doc/
+site_url: https://pve.doc.butubb.cn
 
-repo_name: skn-33/pve-doc
-repo_url: https://github.com/skn-33/pve-doc
+repo_name: 8butubb/pve_doc
+repo_url: https://github.com/8butubb/pve_doc
 
 theme:
   name: material
